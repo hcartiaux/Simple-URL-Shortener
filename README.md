@@ -32,8 +32,8 @@ There is a few vars to edit in shorturl.php:
 In order to use url rewriting, with Apache 2, create a .htaccess file
 with these lines:
 
-  RewriteEngine on
-  RewriteRule ^([0-9a-zA-Z]+)$ shorturl.php?p=$1 [L]
+    RewriteEngine on
+    RewriteRule ^([0-9a-zA-Z]+)$ shorturl.php?p=$1 [L]
 
 You can rename the script shorturl.php to whatever you
 want, but think about changing references to the old name in
