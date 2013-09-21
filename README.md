@@ -1,7 +1,7 @@
 Simple Url Shortener
 ====================
 
-Copyright (C) 2010 Hyacinthe Cartiaux <hyacinthe.cartiaux@free.fr>
+Copyright (C) 2010 Hyacinthe Cartiaux <hyacinthe.cartiaux@free.fr>  
 GNU AGPL v3
 
 Simple Url Shortener does only one thing : minimizing url.
@@ -21,18 +21,19 @@ the database and be operational directly.
 
 # Configuration
 
-There is a few vars to edit in shorturl.php.
-$TITLE : name of the page
-$SITE : full path to the script. If you don't want to use url
-rewriting, add the name of the script and the query part, in example
-http://www.0wf.fr/shorturl.php?p=
-$DBFILE : name of the sqlite database file
+There is a few vars to edit in shorturl.php:
+
+* $TITLE : name of the page
+* $SITE : full path to the script. If you don't want to use url
+  rewriting, add the name of the script and the query part, in example
+  http://www.0wf.fr/shorturl.php?p=
+* $DBFILE : name of the sqlite database file
 
 In order to use url rewriting, with Apache 2, create a .htaccess file
-with these lines :
+with these lines:
 
-RewriteEngine on
-RewriteRule ^([0-9a-zA-Z]+)$ shorturl.php?p=$1 [L]
+  RewriteEngine on
+  RewriteRule ^([0-9a-zA-Z]+)$ shorturl.php?p=$1 [L]
 
 You can rename the script shorturl.php to whatever you
 want, but think about changing references to the old name in
